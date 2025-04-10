@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Social Media Post Generator</title>
+</head>
+<body>
+    <h2>AI Social Media Post Generator 🧠🚀</h2>
+    
+    <form method="POST">
+        <input type="text" name="topic" placeholder="Enter topic" required/>
+        <button type="submit">Generate Posts</button>
+    </form>
+
+    {% if news %}
+    <hr>
+    <h3>Topic: {{topic}}</h3>
+    <h4>News Headline</h4>
+    <p>{{news.title}}</p>
+    <p>{{news.description}}</p>
+
+    <hr>
+    <h4>🖥️ <strong>X/Twitter Post:</strong></h4>
+    <p>{{twitter_post}}</p>
+
+    <h4>📘 <strong>Facebook Post:</strong></h4>
+    <p>{{facebook_post}}</p>
+
+    <h4>💼 <strong>LinkedIn Post:</strong></h4>
+    <p>{{linkedin_post}}</p>
+    {% endif %}
+
+</body>
+</html>
